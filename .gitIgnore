@@ -1,3 +1,4 @@
 # ELiminar los node_modules de los Microfronts
 microfront-shell/node_modules
 microfront-posts/node_modules
+microfront-photos/node_modules
