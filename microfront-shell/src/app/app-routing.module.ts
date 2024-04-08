@@ -1,7 +1,27 @@
+import { loadRemoteModule } from '@angular-architects/module-federation';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    loadChildren: () =>
+      loadRemoteModule({
+        type: 'module',
+        remoteEntry: 'http://localhost:4201/remoteEntry.js',
+        exposedModule: './PhotoModule',
+      }).then((m) => m.PhotoModule),
+  },
+  {
+    path: 'posts',
+    loadComponent: () =>
+      loadRemoteModule({
+        type: 'module',
+        remoteEntry: 'http://localhost:4202/remoteEntry.js',
+        exposedModule: './PostsComponent',
+      }).then((m) => m.PostsComponent),
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
