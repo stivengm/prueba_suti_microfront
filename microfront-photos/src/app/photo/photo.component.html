@@ -4,7 +4,7 @@
     <div class="content_items">
         <div class="item_photo" *ngFor="let photo of photosSlice">
             <p class="title">{{ photo.title }}</p>
-            <img [src]="photo.thumbnailUrl" [alt]="'photo-id-' + photo.id">
+            <img class="img_photo" [src]="photo.thumbnailUrl" [alt]="'photo-id-' + photo.id">
         </div>
     </div>
     <div class="actions">
