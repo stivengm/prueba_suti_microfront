@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PhotoComponent } from './photo.component';
 
+import { FormsModule } from '@angular/forms'
+
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
@@ -16,7 +18,9 @@ const routes: Routes = [
   ],
   imports: [
     RouterModule.forChild(routes),
-    CommonModule
-  ]
+    CommonModule,
+    FormsModule
+  ],
+  bootstrap: [PhotoComponent],
 })
 export class PhotoModule { }

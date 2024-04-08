@@ -6,6 +6,7 @@
         justify-content: center;
         margin-top: 35px;
         .item_photo {
+            position: relative;
             width: 200px;
             height: 230px;
             text-align: center;
@@ -17,6 +18,10 @@
             -webkit-box-shadow: 0px 0px 38px -10px rgba(0,0,0,0.68);
             -moz-box-shadow: 0px 0px 38px -10px rgba(0,0,0,0.68);
             box-shadow: 0px 0px 38px -10px rgba(0,0,0,0.68);
+            .delete {
+                position: absolute;
+                visibility: hidden;
+            }
             .title {
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -31,6 +36,19 @@
             &:hover {
                 scale: 1.1;
                 background-color: #ededed;
+                .delete {
+                    visibility: visible;
+                    right: 0;
+                    width: 20px;
+                    height: 20px;
+                    background: red;
+                    color: white;
+                    padding: 3px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
             }
         }
     }
@@ -39,5 +57,31 @@
         display: flex;
         justify-content: center;
         margin-top: 35px;
+    }
+}
+.modal {
+    position: absolute;
+    top: 0;
+    width: 100vh;
+    height: 100vh;
+    background: #0000009e;
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .content {
+        background: #FFF;
+        border-radius: 20px;
+        padding: 20px;
+        width: 500px;
+        div {
+            input {
+                width: 100%;
+            }
+        }
+        .actions {
+            
+        }
     }
 }
