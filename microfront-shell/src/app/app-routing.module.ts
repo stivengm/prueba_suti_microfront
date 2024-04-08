@@ -5,6 +5,11 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
+    pathMatch: 'full',
+    redirectTo: 'photos'
+  },
+  {
+    path: 'photos',
     loadChildren: () =>
       loadRemoteModule({
         type: 'module',
@@ -21,6 +26,10 @@ const routes: Routes = [
         exposedModule: './PostsComponent',
       }).then((m) => m.PostsComponent),
   },
+  {
+    path: '**',
+    redirectTo: 'photos'
+  }
 ];
 
 @NgModule({

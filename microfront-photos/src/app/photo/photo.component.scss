@@ -1,7 +1,10 @@
 .content_photo {
+    padding: 20px 2%;
     .content_items {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 35px;
         .item_photo {
             width: 200px;
             height: 230px;
@@ -30,5 +33,11 @@
                 background-color: #ededed;
             }
         }
+    }
+    .actions {
+        gap: 30px;
+        display: flex;
+        justify-content: center;
+        margin-top: 35px;
     }
 }
