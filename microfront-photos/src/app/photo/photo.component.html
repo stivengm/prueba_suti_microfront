@@ -3,8 +3,8 @@
     <p>Página {{ page }}</p>
     <div class="content_items">
         <div class="item_photo" *ngFor="let photo of photosSlice">
-            <p>{{ photo.title }}</p>
-            <img [src]="photo.thumbnailUrl" alt="">
+            <p class="title">{{ photo.title }}</p>
+            <img [src]="photo.thumbnailUrl" [alt]="'photo-id-' + photo.id">
         </div>
     </div>
     <div class="actions">
