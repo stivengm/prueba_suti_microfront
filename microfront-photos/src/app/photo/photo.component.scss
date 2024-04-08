@@ -1,0 +1,10 @@
+.content_photo {
+    .content_items {
+        display: flex;
+        flex-wrap: wrap;
+        .item_photo {
+            width: 200px;
+            height: 230px;
+        }
+    }
+}

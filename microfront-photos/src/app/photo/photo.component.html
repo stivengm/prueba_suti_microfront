@@ -1,0 +1,15 @@
+<div class="content_photo">
+    <p>Se muestran desde {{ recordsInitial }} hasta {{ recordsView }} de {{ photos.length }} registros.</p>
+    <p>Página {{ page }}</p>
+    <div class="content_items">
+        <div class="item_photo" *ngFor="let photo of photosSlice">
+            <p>{{ photo.title }}</p>
+            <img [src]="photo.thumbnailUrl" alt="">
+        </div>
+    </div>
+    <div class="actions">
+
+        <button type="button" (click)="onBack()">Regresar</button>
+        <button type="button" (click)="onNext()">Siguiente</button>
+    </div>
+</div>
