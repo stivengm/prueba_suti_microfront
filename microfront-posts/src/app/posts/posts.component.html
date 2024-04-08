@@ -1,7 +1,8 @@
-<h1>Lets works!</h1>
-
 <div class="content_posts">
     <div class="content_item_posts" *ngFor="let post of posts">
-        {{ post.title }}
+        <p>id: {{ post.id }}</p>
+        <p>Título: {{ post.title }}</p>
+        <p>Body: {{ post.body }}</p>
+        <p>UserId: {{ post.userId }}</p>
     </div>
 </div>
