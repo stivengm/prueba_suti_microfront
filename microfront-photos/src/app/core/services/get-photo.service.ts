@@ -12,6 +12,6 @@ export class GetPhotoService {
   constructor(private http: HttpClient) { }
 
   getPhotos(): Observable<PhotoInterface[]> {
-    return this.http.get<PhotoInterface[]>(environment + `/photos`);
+    return this.http.get<PhotoInterface[]>(environment.apiPhotos + `/photos`);
   }
 }
